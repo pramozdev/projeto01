@@ -8,6 +8,9 @@
 header {
     background-image: linear-gradient(rgb(36, 177, 111), rgb(0, 0, 0), rgb(0, 0, 0));
     height: 7vh;
+    display: flex; /* Adicionado para centralizar a navbar */
+    justify-content: center; /* Adicionado para centralizar a navbar */
+    align-items: center; /* Alinha verticalmente ao centro, se necessário */
 }
 
 header nav ul {
@@ -93,28 +96,196 @@ main form textarea {
 footer {
     background-image: linear-gradient(rgb(36, 177, 111), rgb(0, 0, 0), rgb(0, 0, 0));
     width: 100%;
-    height: 7vh;
+    height: auto;
     bottom: 0;
     position: fixed;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around; /* Distribuir os itens ao longo do footer */
+    align-items: center; /* Alinhar verticalmente os itens */
+    flex-wrap: wrap; /* Permitir que os itens quebrem para a próxima linha em telas menores */
 }
 
 footer p {
     text-align: center;
-    line-height: 7vh;
     color: white;
     font-weight: bold;
     letter-spacing: 2px;
+    margin: 0;
+    width: 100%; /* Garante que o parágrafo ocupe a largura total */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a i {
+    color: white;
+}
+
+.social-icons a:hover {
+    color: #4ea0ca;
 }
 
 .img {
-    width: 350px;
-    height: 300px;
-    align-items: center;
-    margin: 20px;
-    border-radius: 20px;
+    display: block;
+    margin: 10px auto; /* Adiciona margem superior e inferior de 10px e centraliza horizontalmente */
+    max-width: 100%;
+    height: auto;
 }
 
-/* #################################### FIM ESTILOS DO RODAPÉ #################################### */
+/* Estilos para a seção de soluções usando Grid Layout */
 
+.solucoes-grid {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+}
 
-/* @MEDIA@MEDIA@MEDIA@ MEDIA INÍCIO ESTILOS PARA RESPONSIVIDADE @MEDIA@MEDIA@MEDIA@ */
+.solucao-item {
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Media queries para responsividade */
+
+/* Para telas menores que 600px (celulares) */
+@media screen and (max-width: 600px) {
+    .solucoes-grid {
+        grid-template-columns: 1fr; /* Uma coluna */
+    }
+
+    .img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Para telas entre 601px e 768px (tablets) */
+@media screen and (min-width: 601px) and (max-width: 768px) {
+    .solucoes-grid {
+        grid-template-columns: repeat(2, 1fr); /* Duas colunas */
+    }
+
+    .img {
+        width: 80%;
+        height: auto;
+    }
+}
+
+/* Para telas maiores que 768px (monitores) */
+@media screen and (min-width: 769px) {
+    .solucoes-grid {
+        grid-template-columns: repeat(3, 1fr); /* Três colunas */
+    }
+
+    .img {
+        width: 350px;
+        height: 300px;
+    }
+}
+
+/* Para telas com largura de 962px */
+@media screen and (min-width: 962px) {
+    .solucoes-grid {
+        grid-template-columns: repeat(3, 1fr); /* Três colunas */
+    }
+
+    .img {
+        width: 380px;
+        height: 320px;
+    }
+}
+
+/* Para telas com resolução de 1280x1024 */
+@media screen and (min-width: 1280px) and (min-height: 1024px) {
+    .solucoes-grid {
+        grid-template-columns: repeat(3, 1fr); /* Três colunas */
+    }
+
+    .img {
+        width: 400px;
+        height: 350px;
+    }
+}
+
+/* paisagem em celulares */
+@media screen and (max-width: 600px) and (orientation: landscape) {
+    .solucoes-grid {
+        grid-template-columns: repeat(2, 1fr); /* Duas colunas em paisagem */
+    }
+}
+
+/* paisagem em tablets */
+@media screen and (min-width: 601px) and (max-width: 768px) and (orientation: landscape) {
+    .solucoes-grid {
+        grid-template-columns: repeat(3, 1fr); /* Três colunas em paisagem */
+    }
+}
+
+/* menu hambúrguer */
+.menu-toggle {
+    display: none; /* Esconde o menu hambúrguer por padrão */
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-toggle .bar {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+/* Estilos para o menu quando estiver aberto */
+header nav ul.active {
+    display: flex !important; /* Garante que o menu apareça */
+    flex-direction: column;
+    align-items: center;
+    width: 100%; 
+}
+
+/* Media query para telas menores (ex: 600px) */
+@media screen and (max-width: 600px) {
+    header nav {
+        width: 100%;
+    }
+
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 7vh;
+        left: 0;
+        background-color: rgba(36, 177, 111, 0.9);
+        width: 100%;
+        z-index: 1; /* Garante que o menu fique acima de outros elementos */
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 2; /* Garante que o menu hambúrguer fique acima do menu */
+    }
+}
+

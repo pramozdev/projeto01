@@ -12,21 +12,20 @@
 <body>
 
     <header>
-
         <nav>
-
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
             <ul>
-
-                <li><a href="">Home</a></li>
+                <li><a href="#home">Home</a></li>
                 <li><a href="#sobre">About</a></li>
                 <li><a href="#solucoes">Solutions</a></li>
                 <li><a href="#contato">Contact</a></li>
                 <li><a href="#login">Login</a></li>
-
             </ul>
-
         </nav>
-
     </header>
 
     <main>
@@ -49,42 +48,50 @@
             <h1>Na InnoVa Web, oferecemos um ecossistema completo de soluções digitais sob medida para cada desafio.
                 Veja como podemos impulsionar sua marca:</h1>
 
-            <h2>🌐 Desenvolvimento Web</h2>
-            <img class="img" src="../img/img3.webp" alt="">
+            <div class="solucoes-grid">
+                <div class="solucao-item">
+                    <h2>🌐 Desenvolvimento Web</h2>
+                    <img class="img" src="../img/img3.webp" alt="">
+                    <p>- Sites institucionais, landing pages e e-commerces com design responsivo e performance
+                        otimizada.
+                        - Integrações com sistemas e plataformas para uma experiência fluida e inteligente.</p>
+                </div>
 
-            <p>- Sites institucionais, landing pages e e-commerces com design responsivo e performance otimizada.
-                - Integrações com sistemas e plataformas para uma experiência fluida e inteligente.</p>
+                <div class="solucao-item">
+                    <h2>📱 Aplicativos Mobile</h2>
+                    <img class="img" src="../img/img4.webp">
+                    <p>- Aplicativos nativos e híbridos para iOS e Android.
+                        - Experiências intuitivas que colocam o usuário no centro da solução.</p>
+                </div>
 
-            <h2>📱 Aplicativos Mobile</h2>
-            <img class="img" src="../img/img4.webp">
+                <div class="solucao-item">
+                    <h2>🎯 Estratégia Digital</h2>
+                    <img class="img" src="../img/digitalmarketing.webp">
+                    <p>- Consultoria em presença online, branding e posicionamento.
+                        - Planejamento de campanhas digitais e análise de performance.</p>
+                </div>
 
-            <p>- Aplicativos nativos e híbridos para iOS e Android.
-                - Experiências intuitivas que colocam o usuário no centro da solução.</p>
+                <div class="solucao-item">
+                    <h2>🧩 UX/UI Design</h2>
+                    <img class="img" src="../img/desenvolvimentoweb.webp">
+                    <p>- Prototipagem e design centrado no usuário.
+                        - Interfaces que encantam e convertem.</p>
+                </div>
 
-            <h2>🎯 Estratégia Digital</h2>
-            <img class=img src="../img/digitalmarketing.webp">
-
-            <p>- Consultoria em presença online, branding e posicionamento.
-                - Planejamento de campanhas digitais e análise de performance.</p>
-
-            <h2>🧩 UX/UI Design</h2>
-            <img class=img src="../img/desenvolvimentoweb.webp">
-
-            <p>- Prototipagem e design centrado no usuário.
-                - Interfaces que encantam e convertem.</p>
-
-            <h2>🔒 Segurança & Performance</h2>
-            <img class=img src="../img/seguranca.webp">
-
-            <p>- Otimização de velocidade, SEO técnico e proteção contra vulnerabilidades.
-                - Monitoramento contínuo e suporte dedicado.</p>
+                <div class="solucao-item">
+                    <h2>🔒 Segurança & Performance</h2>
+                    <img class="img" src="../img/seguranca.webp">
+                    <p>- Otimização de velocidade, SEO técnico e proteção contra vulnerabilidades.
+                        - Monitoramento contínuo e suporte dedicado.</p>
+                </div>
+            </div>
         </section>
 
 
         <h2>📞 Fale Conosco</h2>
         <p>Estamos aqui para ajudar! Entre em contato conosco através do formulário abaixo:</p>
 
-        <section id="contato"></section>
+        <section id="contato">
             <form action="#" method="post">
                 <label for="nome"><b>Nome:</b></label>
                 <input type="text" placeholder="Digite seu nome" id="nome" name="nome" required><br><br>
@@ -93,7 +100,8 @@
                 <input type="email" placeholder="Digite seu e-mail" id="email" name="email" required><br><br>
 
                 <label for="mensagem"><b>Mensagem:</b></label><br><br>
-                <textarea id="mensagem" placeholder="Digite sua Mensagem" name="mensagem" maxlength="255" rows="4"required></textarea><br><br>
+                <textarea id="mensagem" placeholder="Digite sua Mensagem" name="mensagem" maxlength="255" rows="4"
+                    required></textarea><br><br>
 
                 <button type="submit"><b>Enviar</b></button>
                 <button type="reset"><b>Limpar</b></button>
@@ -104,10 +112,16 @@
 
     </main>
     <footer>
-
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/5521123456789" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
         <p>Copyright &copy; 2025</p>
-
     </footer>
+
+    <script src="../js/script.js"></script>
+
 </body>
 
 </html>
